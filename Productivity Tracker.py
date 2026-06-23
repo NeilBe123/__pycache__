@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href = "https://pyscript.net/latest/pyscrip.css">
+    <script defer src = "https://pyscript.net/latest/pyscript.js"></script>
+</head>
+
+<body>
+<py-config>
+packages = ["tkinter"]
+</py-config>
+
+
+<py-script>
 from tkinter import *
 from tkinter import ttk
 
@@ -15,16 +31,16 @@ def productivity_tracker():
     Header_label = Label(
         window,
         text = "How much have you done?",
-        
+
         # font = (font type, size, type)
         font = ('Arial', 20, "bold"),
-        
+
         #text color
         foreground = "#FFF4E1",
-        
+
         #backgroud color
         background = "#1A312C",
-        
+
         #padding between the text and border
         padx = 20,
         pady = 20
@@ -36,7 +52,7 @@ def productivity_tracker():
     main_frame = Frame(
         window,
         background = "#428475"
-        )
+    )
     main_frame.grid(row = 1, column = 0)
 
 
@@ -89,7 +105,7 @@ def productivity_tracker():
             highlightbackground = "#24B1B1"
         )
         listbox_item_frame.pack()
-        listbox_item_frame.bind("<Double-1>", on_double_click)
+        listbox_item_frame.bind("Double-1", on_double_click)
 
 
         #The category is titled here
@@ -104,11 +120,11 @@ def productivity_tracker():
 
         #Entry() allows for the user to input their own tasks
         task_entry = Entry(
-        listbox_item_frame,
-        #configures font, background, and foreground
-        font = ('monospace', 12),
-        background = "#B1D3B9",
-        foreground = "#303841",
+            listbox_item_frame,
+            #configures font, background, and foreground
+            font = ('monospace', 12),
+            background = "#B1D3B9",
+            foreground = "#303841",
         )
         task_entry.grid(row = 2, column = 0) 
 
@@ -116,7 +132,7 @@ def productivity_tracker():
         list_dropdown = Frame(
             listbox_item_frame,
             background = "#88BDA4"
-        )
+            )
         list_dropdown.grid(row = 1, column = 0)
 
         #allows for the submit button to work
@@ -145,10 +161,10 @@ def productivity_tracker():
             offvalue = 0,
             command = delete
             )
-           
+
             #retrieves the task_entry input
             new_task = task_entry.get()
-            
+
             #Appends each checkbutton to contain the new input
             task_display.configure(text =f"{new_task}")
             task_display.pack()
@@ -210,4 +226,6 @@ def productivity_tracker():
 
     
 productivity_tracker()
-
+</py-script>
+</body>
+</html>
