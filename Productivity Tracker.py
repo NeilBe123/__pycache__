@@ -2,7 +2,7 @@
 <html lang = "en">
 
 <head>
-    <meta charset = "UTF-8">
+    <meta http=equiv = "Content-Type" content = "text/html; charset = "UTF-8">
     <link rel = "stylesheet" href = "https://pyscript.net/latest/pyscrip.css">
     <script defer src = "https://pyscript.net/latest/pyscript.js"></script>
 </head>
