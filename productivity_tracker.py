@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html lang = "en">
-
-<head>
-    <meta http=equiv = "Content-Type" content = "text/html; charset = "UTF-8">
-    <link rel = "stylesheet" href = "https://pyscript.net/latest/pyscrip.css">
-    <script defer src = "https://pyscript.net/latest/pyscript.js"></script>
-</head>
-
-<body>
-<py-config>
-packages = ["tkinter"]
-</py-config>
-
-
-<py-script>
 from tkinter import *
 from tkinter import ttk
 
@@ -226,6 +210,3 @@ def productivity_tracker():
 
     
 productivity_tracker()
-</py-script>
-</body>
-</html>
